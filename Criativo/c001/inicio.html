@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Inicio.css">
+    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> <!-- Fontes do Google -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">Portfólio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="imagens/photo_2025-02-07_16-27-38.jpg" alt="Minha Foto" class="profile-image">
+                <h1>Olá, eu sou Pedro Lucas</h1>
+                <p>Desenvolvedor | Advogado | Graduado em TI</p>
+                <a href="#sobre" class="btn">Conheça mais</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="section">
+            <h2>Sobre Mim</h2>
+            <p>Eu sou um profissional apaixonado por tecnologia e direito, com experiência em desenvolvimento web e consultoria jurídica.</p>
+        </section>
+
+        <section id="experiencia" class="section">
+            <h2>Experiência</h2>
+            <div class="experience-item">
+                <h3>Desenvolvedor Front-end</h3>
+                <p>Empresa XYZ | 2020 - Presente</p>
+                <p>Desenvolvimento de interfaces responsivas e otimização de performance.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Advogado</h3>
+                <p>Escritório ABC | 2018 - 2020</p>
+                <p>Consultoria jurídica em direito digital e propriedade intelectual.</p>
+            </div>
+        </section>
+
+        <section id="projetos" class="section">
+            <h2>Projetos</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição breve do projeto.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição breve do projeto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo através do email: <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pedro Lucas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="Inicio.js"></script>
+</body>
+
+</html>
+

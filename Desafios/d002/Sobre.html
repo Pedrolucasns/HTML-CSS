@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Meu Site de Vídeos</title>
+    <link rel="icon" href="Imagens/favicon-32x32.png" type="image/png">
+    <style>
+        body {
+            background-color: #0A0A0A; /* Fundo preto profundo */
+            color: #E0E0E0; /* Texto cinza claro */
+            font-family: 'Poppins', sans-serif; /* Fonte moderna e tecnológica */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Importação da fonte Poppins do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        /* Estilos do cabeçalho */
+        header {
+            background-color: #121212; /* Fundo escuro */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+        }
+
+        /* Estilos da barra de pesquisa */
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 25px; /* Bordas arredondadas */
+            font-size: 16px;
+            background-color: #1E1E1E; /* Fundo escuro para o input */
+            color: #E0E0E0; /* Texto cinza claro */
+            outline: none;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .search-bar input::placeholder {
+            color: #888; /* Placeholder mais suave */
+        }
+
+        .search-bar input:focus {
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Efeito de foco com sombra azul */
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #007BFF; /* Azul elétrico */
+            border: none;
+            border-radius: 25px; /* Bordas arredondadas */
+            cursor: pointer;
+            color: #FFF;
+            font-size: 16px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+            transform: scale(1.05); /* Efeito de zoom */
+        }
+
+        /* Estilos do ícone do menu hambúrguer */
+        .menu-icon {
+            color: #E0E0E0;
+            font-size: 24px;
+            cursor: pointer;
+            display: none; /* Esconder em telas grandes */
+            transition: color 0.3s ease;
+        }
+
+        .menu-icon:hover {
+            color: #007BFF; /* Azul ao passar o mouse */
+        }
+
+        /* Estilos do menu lateral */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Esconder o menu inicialmente */
+            background-color: #1E1E1E; /* Fundo escuro */
+            padding-top: 60px;
+            transition: left 0.3s ease;
+            z-index: 1001;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+        }
+
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #E0E0E0;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #007BFF; /* Azul ao passar o mouse */
+            color: #FFF;
+        }
+
+        .sidebar.active {
+            left: 0; /* Mostrar o menu */
+        }
+
+        /* Estilos do conteúdo principal */
+        main {
+            padding-top: 80px; /* Espaço para o header */
+        }
+
+        .category {
+            margin: 20px;
+        }
+
+        .category h2 {
+            color: #007BFF; /* Azul elétrico para títulos */
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        nav a {
+            color: #FFF;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #FF5733;
+        }
+        main {
+            padding-top: 80px; /* Espaço para o header */
+            text-align: center;
+        }
+        footer {
+            background-color: #1A1A1A;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categorias.html">Categorias</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Sobre Nós</h1>
+        <p>Este é um site dedicado a compartilhar vídeos incríveis sobre saúde, fitness e notícias. Aproveite!</p>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100003302713569" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/_pedrolns" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 Meu Site de Vídeos</p>
+    </footer>
+</body>
+</html>

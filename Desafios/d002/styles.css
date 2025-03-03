@@ -1,0 +1,225 @@
+/* Estilos globais */
+body {
+    background-color: #0F0F0F; /* Fundo escuro */
+    color: #FFF; /* Texto branco */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #1A1A1A; /* Cor de fundo escura */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos da barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    background-color: #2A2A2A; /* Fundo escuro para o input */
+    color: #FFF; /* Texto branco */
+}
+
+.search-bar input::placeholder {
+    color: #888; /* Placeholder mais suave */
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #FF5733; /* Laranja vibrante */
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #E64A19; /* Laranja mais escuro ao passar o mouse */
+}
+
+/* Estilos do ícone do menu hambúrguer */
+.menu-icon {
+    color: #007BFF;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Esconder em telas grandes */
+}
+
+/* Estilos do menu lateral */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Esconder o menu inicialmente */
+    background-color: #2A2A2A; /* Fundo escuro */
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1001;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #FF5733; /* Laranja ao passar o mouse */
+}
+
+.sidebar.active {
+    left: 0; /* Mostrar o menu */
+}
+
+/* Estilos do carrossel */
+.swiper-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 80px; /* Espaço para o header */
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fundo preto para combinar com o player */
+}
+
+.swiper-slide iframe {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Botões de navegação do carrossel */
+.swiper-button-next, .swiper-button-prev {
+    color: #FF5733; /* Laranja vibrante */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 50%; /* Botões circulares */
+    transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo mais escuro ao passar o mouse */
+}
+
+/* Paginação do carrossel */
+.swiper-pagination-bullet {
+    background-color: #FFF; /* Cor dos pontos de paginação */
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FF5733; /* Laranja para o ponto ativo */
+    opacity: 1;
+}
+
+/* Estilos da grade de vídeos */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-card {
+    background-color: #2A2A2A; /* Fundo escuro */
+    padding: 15px;
+    border-radius: 10px; /* Bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+}
+
+.video-card img {
+    width: 100%;
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 10px;
+}
+
+.video-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #FFF;
+}
+
+.video-card p {
+    font-size: 14px;
+    color: #BBB; /* Texto mais suave */
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #1A1A1A; /* Fundo escuro */
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #FFF;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #FFF;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FF5733; /* Laranja ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; /* Mostrar o ícone do menu em telas pequenas */
+    }
+    .search-bar input {
+        width: 200px; /* Reduzir o tamanho da barra de pesquisa */
+    }
+    .swiper-container {
+        height: 300px; /* Reduzir a altura do carrossel */
+    }
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar a grade */
+    }
+}

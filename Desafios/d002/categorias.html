@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias - Meu Site de Vídeos</title>
+    <link rel="icon" href="Imagens/favicon-32x32.png" type="image/png">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background-color: #0A0A0A; /* Fundo preto profundo */
+            color: #E0E0E0; /* Texto cinza claro */
+            font-family: 'Poppins', sans-serif; /* Fonte moderna e tecnológica */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Importação da fonte Poppins do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        /* Estilos do cabeçalho */
+        header {
+            background-color: #121212; /* Fundo escuro */
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+        }
+
+        /* Estilos da barra de pesquisa */
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 25px; /* Bordas arredondadas */
+            font-size: 16px;
+            background-color: #1E1E1E; /* Fundo escuro para o input */
+            color: #E0E0E0; /* Texto cinza claro */
+            outline: none;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .search-bar input::placeholder {
+            color: #888; /* Placeholder mais suave */
+        }
+
+        .search-bar input:focus {
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Efeito de foco com sombra azul */
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #007BFF; /* Azul elétrico */
+            border: none;
+            border-radius: 25px; /* Bordas arredondadas */
+            cursor: pointer;
+            color: #FFF;
+            font-size: 16px;
+            margin-left: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+            transform: scale(1.05); /* Efeito de zoom */
+        }
+
+        /* Estilos do ícone do menu hambúrguer */
+        .menu-icon {
+            color: #E0E0E0;
+            font-size: 24px;
+            cursor: pointer;
+            display: none; /* Esconder em telas grandes */
+            transition: color 0.3s ease;
+        }
+
+        .menu-icon:hover {
+            color: #007BFF; /* Azul ao passar o mouse */
+        }
+
+        /* Estilos do menu lateral */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Esconder o menu inicialmente */
+            background-color: #1E1E1E; /* Fundo escuro */
+            padding-top: 60px;
+            transition: left 0.3s ease;
+            z-index: 1001;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+        }
+
+        .sidebar a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #E0E0E0;
+            display: block;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #007BFF; /* Azul ao passar o mouse */
+            color: #FFF;
+        }
+
+        .sidebar.active {
+            left: 0; /* Mostrar o menu */
+        }
+
+        /* Estilos do conteúdo principal */
+        main {
+            padding-top: 80px; /* Espaço para o header */
+        }
+
+        .category {
+            margin: 20px;
+        }
+
+        .category h2 {
+            color: #007BFF; /* Azul elétrico para títulos */
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .video-card {
+            background-color: #1E1E1E; /* Fundo escuro */
+            padding: 15px;
+            border-radius: 15px; /* Bordas arredondadas */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+            box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3); /* Sombra azul */
+        }
+
+        .video-card img {
+            width: 100%;
+            border-radius: 10px; /* Bordas arredondadas */
+            margin-bottom: 10px;
+        }
+
+        .video-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #E0E0E0;
+        }
+
+        /* Estilos do rodapé */
+        footer {
+            background-color: #121212; /* Fundo escuro */
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #333; /* Linha superior sutil */
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #E0E0E0;
+        }
+
+        .social-links {
+            margin-bottom: 10px;
+        }
+
+        .social-links a {
+            color: #E0E0E0;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #007BFF; /* Azul ao passar o mouse */
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block; /* Mostrar o ícone do menu em telas pequenas */
+            }
+            .search-bar input {
+                width: 200px; /* Reduzir o tamanho da barra de pesquisa */
+            }
+            .video-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajustar a grade */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Ícone do menu hambúrguer à esquerda -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Barra de pesquisa à direita -->
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar no site..." id="searchInput">
+            <button onclick="searchSite()"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <a href="index.html">Home</a>
+        <a href="categorias.html">Categorias</a>
+        <a href="sobre.html">Sobre</a>
+    </div>
+    <main>
+        <div class="category">
+            <h2>Saúde</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <a href="video.html?videoId=rmmjvzZfwFw">
+                        <img src="https://img.youtube.com/vi/rmmjvzZfwFw/mqdefault.jpg" alt="Vídeo 1">
+                        <h3>Vídeo 1 - Saúde</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Fitness</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <a href="video.html?videoId=Wdmvqdvftcs">
+                        <img src="https://img.youtube.com/vi/Wdmvqdvftcs/mqdefault.jpg" alt="Vídeo 2">
+                        <h3>Vídeo 2 - Fitness</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <h2>Notícias</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <a href="video.html?videoId=ALUM1z-AGk0">
+                        <img src="https://img.youtube.com/vi/ALUM1z-AGk0/mqdefault.jpg" alt="Vídeo 3">
+                        <h3>Vídeo 3 - Notícias</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100003302713569" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/_pedrolns" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 Meu Site de Vídeos</p>
+    </footer>
+    <!-- JavaScript para o menu hambúrguer e barra de pesquisa -->
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function searchSite() {
+            const searchTerm = document.getElementById('searchInput').value;
+            alert(`Você pesquisou por: ${searchTerm}`); // Substitua por uma função de busca real
+        }
+    </script>
+</body>
+</html>

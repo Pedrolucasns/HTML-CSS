@@ -1,0 +1,73 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #10403B;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos gerais para o conteúdo principal */
+main {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #127369;
+    width: 600px;
+    padding: 10px;
+    margin: 20px auto;
+    overflow: hidden; /* Garante que nada ultrapasse o limite */
+}
+
+/* Estilo do título */
+h1 {
+    text-align: center;
+    background-color: #8AA6A3;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #758d8b;
+    color: black;
+    margin: 0 auto 10px auto; /* Remove margens indesejadas e adiciona um espaçamento abaixo */
+    padding: 10px;
+    width: calc(100% - 20px); /* O título agora respeita os limites do main */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+/* Estilo do parágrafo */
+p {
+    color: black;
+    text-align: justify;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) { /* Tablets */
+    main {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding: 10px;
+        width: 100%;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) { /* Smartphones */
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}

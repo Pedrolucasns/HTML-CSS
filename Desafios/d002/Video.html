@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistir Vídeo - Meu Site de Vídeos</title>
+    <link rel="icon" href="Imagens/favicon-32x32.png" type="image/png">
+    <style>
+        body {
+            background-color: #0F0F0F;
+            color: #FFF;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1A1A1A;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #FFF;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            color: #FF5733;
+        }
+        main {
+            padding-top: 80px; /* Espaço para o header */
+            text-align: center;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #1A1A1A;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="categorias.html">Categorias</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100003302713569" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/_pedrolns" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>&copy; 2025 Meu Site de Vídeos</p>
+    </footer>
+    <script>
+        // Captura o ID do vídeo da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const videoId = urlParams.get('videoId');
+        // Define o vídeo no iframe
+        document.getElementById('videoPlayer').src = `https://www.youtube.com/embed/${videoId}`;
+    </script>
+</body>
+</html>

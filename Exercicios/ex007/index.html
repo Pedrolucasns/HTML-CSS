@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens Dinâmicas, Áudio e Vídeo</title>
+    <style>
+        /* Estilização geral */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #444;
+            background-color: #e2e8f0;
+        }
+
+        h2 {
+            color: #555;
+            margin-top: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 2px solid #ddd;
+        }
+
+        /* Centralização dos elementos */
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilização para as imagens */
+        picture img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 3px solid #ddd;
+            border-radius: 10px;
+        }
+
+        /* Estilização para áudio */
+        audio {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Estilização para vídeo */
+        video, iframe {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo ao meu Sétimo Exercício</h1>
+    <div class="content">
+        <h2>Imagens Dinâmicas</h2>
+        <hr>
+        <p>Para fazer imagens dinâmicas, vamos precisar de uma imagem em 3 tamanhos diferentes, por exemplo: 300x300px; 700x700px e 1000x1000px.</p>
+        <p>As tags usadas serão "picture" e "img". Por padrão, a foto maior será carregada, mas para ajustar os tamanhos, usaremos os atributos da tag <strong>source</strong>, como type, srcset e media.</p>
+        <picture>
+            <source media="(max-width: 600px)" srcset="golf_PNGS.png" type="image/png">
+            <source media="(max-width: 1200px)" srcset="golf_PNGM.png" type="image/png">
+            <img src="golf_PNG4.png" alt="Imagem dinâmica">
+        </picture>
+
+        <h2>Áudios</h2>
+        <audio preload="metadata" controls>
+            <source src="calcinhapreta-dois-amoresduas-paixoes-0f5793e4.mp3" type="audio/mp3"> 
+            Seu navegador não suporta o áudio.
+        </audio>
+
+        <h2>Vídeo</h2>
+        <video poster="camera.jpg" controls>
+            <source src="camera30fps.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução de vídeos.
+        </video>
+
+        <h2>Incorporando um Vídeo do YouTube</h2>
+        <iframe 
+            src="https://www.youtube.com/embed/B_0ggKDf8Lo?si=RTU5hKw8KCvk4Aa5" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</body>
+</html>

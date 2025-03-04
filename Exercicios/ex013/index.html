@@ -5,41 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>testando imagens</title>
     <style>
-        div.quadrado {
-            display: inline-block;
-            border: 2px solid black;
-            border-radius: 10px;
-            width: 100px;
-            height: 100px;
+        div.bloco {
+            background-image: url("imagens/wallpaper003.jpg");
+            border-radius: 5px;
+            height: 200px;
+            margin: 10px;
         }
 
         div#q1 {
-            background-color: skyblue;
+            background-position: center center;
         }
 
         div#q2 {
-            background-image: linear-gradient(gray, red);
+            background-position: bottom right;
         }
 
         div#q3 {
-            background-image: url('imagens/pattern001.png');
+            background-position: top left;
         }
 
         body {
-            background-image:  url("imagens/pattern003.png");
-            background-repeat: no-repeat;
-            background-size: 300px;
+            
         }
     </style>
 </head>
 <body>
-    <div class="quadrado" id="q1">
+    <div class="bloco" id="q1">
 
     </div>
-    <div class="quadrado" id="q2">
+    <div class="bloco" id="q2">
 
     </div>
-    <div class="quadrado" id="q3">
+    <div class="bloco" id="q3">
 
     </div>
 </body>

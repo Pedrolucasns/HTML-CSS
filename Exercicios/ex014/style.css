@@ -1,68 +1,156 @@
-@charset "UTF-8"
- 
-* {
-    margin: 0px;
-    padding: 0px;
+@charset "UTF-8";
 
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e bordas não afetem as dimensões dos elementos */
 }
 
 html, body {
-    min-height: 100vh;
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
     background-color: darkgray;
+    font-family: 'Caveat', cursive; /* Aplicando a fonte ao corpo do site */
+    font-size: 16px; /* Tamanho base da fonte para mobile-first */
 }
 
+/* Estilos do cabeçalho */
 header {
     background-color: black;
     color: white;
     text-align: center;
+    padding: 20px 0; /* Espaçamento menor para mobile */
 }
 
 header > h1 {
-    padding-top: 50px;
+    padding-top: 20px; /* Reduzido para mobile */
     text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+    font-size: 36px; /* Tamanho menor para mobile */
 }
 
 header > p {
-    padding-bottom: 50px;
+    padding-bottom: 20px; /* Reduzido para mobile */
+    font-family: 'Caveat', cursive;
+    font-size: 20px; /* Tamanho menor para mobile */
 }
 
 header > a, footer > a {
     color: white;
     text-decoration: none;
     font-weight: bolder;
-
+    font-family: 'Caveat', cursive;
 }
 
 header a:hover, footer a:hover {
     text-decoration: underline;
 }
 
+/* Estilos das seções */
 section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
+    padding-top: 5vh; /* Reduzido para mobile */
+    padding-bottom: 5vh; /* Reduzido para mobile */
+    line-height: 1.5em; /* Espaçamento menor para mobile */
+    padding-left: 15px; /* Reduzido para mobile */
+    font-family: 'Caveat', cursive;
+    text-align: center; /* Centraliza o texto */
 }
 
 section.normal {
-background-color: white;
-color: black;
+    background-color: white;
+    color: black;
+}
+
+section.normal > p {
+    width: 90%; /* Largura responsiva para mobile */
+    max-width: 800px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o parágrafo */
+    padding: 10px; /* Adiciona um pouco de padding */
 }
 
 section.imagem {
-background-color: rgb(54, 54, 54);
-color: white;
+    background-color: rgb(54, 54, 54);
+    color: white;
 }
- section.imagem > p {
-    width: 585px;
-    background-color: black;
+
+section.imagem > p {
+    width: 90%; /* Largura responsiva para mobile */
+    max-width: 400px; /* Limita a largura máxima */
+    background-color: rgb(37, 37, 37);
     border-radius: 10px;
-    padding-left: 20px;
- }
+    padding: 10px;
+    font-family: 'Caveat', cursive;
+    margin: 0 auto; /* Centraliza o parágrafo */
+}
+
+/* Estilos do rodapé */
 footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px; /* Tamanho menor para mobile */
+}
 
+/* Media Queries para Tablet (768px a 1023px) */
+@media (min-width: 768px) {
+    html, body {
+        font-size: 18px; /* Aumenta o tamanho da fonte para tablet */
+    }
+
+    header > h1 {
+        font-size: 42px; /* Tamanho maior para tablet */
+        padding-top: 30px;
+    }
+
+    header > p {
+        font-size: 24px; /* Tamanho maior para tablet */
+        padding-bottom: 30px;
+    }
+
+    section {
+        padding-top: 7vh; /* Aumenta o espaçamento para tablet */
+        padding-bottom: 7vh;
+        padding-left: 20px;
+    }
+
+    footer {
+        font-size: 18px; /* Aumenta o tamanho da fonte para tablet */
+    }
+}
+
+/* Media Queries para Desktop (a partir de 1024px) */
+@media (min-width: 1024px) {
+    html, body {
+        font-size: 20px; /* Tamanho maior para desktop */
+    }
+
+    header > h1 {
+        font-size: 48px; /* Tamanho maior para desktop */
+        padding-top: 50px;
+    }
+
+    header > p {
+        font-size: 28px; /* Tamanho maior para desktop */
+        padding-bottom: 50px;
+    }
+
+    section {
+        padding-top: 10vh; /* Aumenta o espaçamento para desktop */
+        padding-bottom: 10vh;
+        padding-left: 30px;
+    }
+
+    section.normal > p {
+        max-width: 800px; /* Largura máxima para desktop */
+    }
+
+    section.imagem > p {
+        width: 400px; /* Largura fixa para desktop */
+    }
+
+    footer {
+        font-size: 20px; /* Tamanho maior para desktop */
+    }
 }

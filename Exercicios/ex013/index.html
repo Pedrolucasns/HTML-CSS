@@ -5,49 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>testando imagens</title>
 <style>
-    body{
-        height: 100vh;
-        background: black url('imagens/wallpaper002.jpg') center center no-repeat;
-        background-size: cover;
+    #container {
+        background-image: url('imagens/target001.png');
+        background-size: 100% 100%;
+        position: relative;
+        height: 96vh;
+        padding: 10px;
+        background-color: purple;
     }
 
-    /* shorthand - background
-    color > image > position > repeat > "size" > attachment
-        background-color: black;
-        background-image: url('imagens/wallpaper002.jpg');
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    */
+    #conteudo {
+        background-image: url('imagens/target001.png');
+        background-size: 100% 100%;
 
-main {
-    background-color: white;
-    max-width: 400px;
-    padding: 10px;
-    margin: auto;
-    border: 1px solid darkblue;
-    border-radius: 5px;
-}
+        position: absolute;
+        height: 200px;
+        width: 400px;
+        background-color: yellow;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+    }
 </style>
 </head>
 <body>
-  <main>
-    <h1>Teste de Imagem de Fundo</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vero. Nulla architecto officia soluta quia iste ex, ullam itaque. Qui accusamus molestias consectetur, recusandae temporibus dignissimos aliquam architecto ratione voluptate.</p>
+  <section id="container">
+    <article id="conteudo">
 
-  </main>  
+    </article>
+  </section>
 </body>
 </html>

@@ -11,18 +11,23 @@
     <!--Dá para colocar method no form para diferenciar URl.-->
 
     <!--OBS: Get so pode ter 3000 bits ou seja 3000 letras e nao poderá ser usado para dados sensiveis e imagens, já o post serve para gerar mais uma segurança e passou de 3000 bits ou enviar arquivos, HTTPs é o ideal para segurança.-->
-    
+
     <form action="cadastro.php" autocomplete="off">
 
         <p>
-            <label for="inome">Nome:</label> 
-                <input type="text" name="nome" id="inome"></p>
+            <label for="iusuario">Usuario:</label> 
+                <input type="text" name="usuario" id="iusuario" required></p>
+<!--Voce pode usar required para limitar para preencher ou o minimo e maximo de caracteres e poderá sugerir o autocomplete e dizer para que serve em cada input-->
 
+<!-- poderá tambem colocar size ou seja tamanho do barra como uma dica com nome placeholder essas opçoes vao dentro do input-->
         <p>
-            <label for="isobrenome">Sobrenome</label> 
-                <input type="text" name="sobrenome" id="isobrenome"></p>
+            <label for="isenha">Senha:</label> 
+                <input type="password" name="senha" id="isenha" required minlength="8"></p>
 
-        <p><input type="submit" value="Enviar"></p>
+        <p> 
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Apagar"></p>
+        
 
     </form>
     

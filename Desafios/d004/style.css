@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+table {
+margin: auto;
+border-collapse: collapse;
+}
+
+td, th {
+    
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.tab1 {
+    background-color: lightslategray;
+
+}
+
+.woman {
+    background-color: pink;
+}
+
+.man {
+    background-color: aqua;
+}
+
+.head1 {
+    background-color: lightgrey;
+
+}
+ col.cNome {
+    background-color: yellow;
+
+ }
+
+ col.cSexo {
+    background-color: burlywood;
+
+ }
+
+ col.cIdade {
+    background-color: cadetblue;
+
+ }
+
+ col.cProfissão {
+    background-color: cyan;
+
+ }
+
+body {
+    /* Seus estilos para o body aqui */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 50px;
+}
+
+h2 {
+    text-align: center;
+    background-color: grey;
+    padding: 10px;
+}
+
+h3 {
+    text-align: center;
+
+}
+
+div#Container {
+    margin: auto;
+    overflow-x: auto;
+    max-width: 600px;
+
+}
+
+tr.produtos:nth-child(even) {
+    background-color: bisque;
+}
+
+caption {
+    padding: 10px;
+}

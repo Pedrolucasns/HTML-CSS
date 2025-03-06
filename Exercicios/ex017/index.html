@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Meu Primeiro Formulario</h1>
+    <!--Dá para colocar method no form para diferenciar URl.-->
+
+    <!--OBS: Get so pode ter 3000 bits ou seja 3000 letras e nao poderá ser usado para dados sensiveis e imagens, já o post serve para gerar mais uma segurança e passou de 3000 bits ou enviar arquivos, HTTPs é o ideal para segurança.-->
+    
+    <form action="cadastro.php" autocomplete="off">
+
+        <p>
+            <label for="inome">Nome:</label> 
+                <input type="text" name="nome" id="inome"></p>
+
+        <p>
+            <label for="isobrenome">Sobrenome</label> 
+                <input type="text" name="sobrenome" id="isobrenome"></p>
+
+        <p><input type="submit" value="Enviar"></p>
+
+    </form>
+    
+</body>
+</html>

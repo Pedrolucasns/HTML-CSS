@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cordel {
+    display: block;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+
+}
+
+.ifr0 {
+    width: 95vw;
+    height: 500px;
+    border: 5px solid black;
+}

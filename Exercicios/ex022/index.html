@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=key" />
 </head>
 <body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="#">Logo</a>
+        </div>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
     <main>
         <section id="login">
             <div id="imagem">
@@ -47,5 +69,23 @@
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>&copy; 2025 PedroGostoso. Todos os direitos reservados.</p>
+
+        <p>Desenvolvido por <a href="https://github.com/Pedrolucasns" target="_blank">Pedro Lucas</a></p>
+    </footer>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const navbar = document.getElementById('navbar');
+    
+        hamburgerMenu.addEventListener('click', () => {
+            navbar.classList.toggle('active');  // Toggle da classe para abrir/fechar o menu
+        });
+    </script>
+    
 </body>
 </html>

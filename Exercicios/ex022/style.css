@@ -13,17 +13,83 @@
     box-sizing: border-box;
 }
 
+/* Estilizando o header */
+header {
+    display: flex; /* Usa flexbox para organização */
+    justify-content: space-between; /* Espaço entre logo e links */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    background-color: #594A3C; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaço interno */
+    position: sticky; /* Fixa o header no topo da página */
+    top: 0; /* No topo */
+    width: 100%; /* Largura total */
+    z-index: 1000; /* Fica por cima do conteúdo */
+}
+
+header .logo a {
+    font-size: 1.5em; /* Tamanho maior para o nome ou logo */
+    color: #fff; /* Cor do logo */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Deixa o logo mais destacado */
+}
+
+header nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Organiza os itens de navegação em linha */
+    gap: 20px; /* Espaço entre os itens */
+}
+
+header nav ul li {
+    display: inline; /* Exibe os itens em linha */
+}
+
+header nav ul li a {
+    color: #fff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.1em; /* Tamanho do texto */
+}
+
+header nav ul li a:hover {
+    color: #D9C2A7; /* Cor do link ao passar o mouse */
+}
+
+/* Inicialmente, o menu hamburguer será oculto em telas maiores e a navegação será exibida normalmente */
+.hamburger-menu {
+    display: none; /* Escondido por padrão */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+nav {
+    display: block; /* Padrão, a navegação será visível em telas maiores */
+}
+
 body, html {
     background-color: #D9C2A7;
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;  /* Remove o scroll horizontal */
 }
+
 
 main {
     position: relative;
-    height: 100vh;
+    min-height: calc(100vh - 120px); /* 100vh - altura do header e footer */
     width: 100vw;
 }
+
 
 section#login {
     position: absolute;
@@ -209,6 +275,29 @@ a:active {
     color: #fff; /* Cor do texto quando pressionado */
 }
 
+/* Estilizando o footer */
+footer {
+    background-color: #594A3C;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;  /* Muda para fixed */
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+    z-index: 100; /* Coloca o footer por cima de qualquer outro conteúdo */
+}
+
+
+footer a {
+    color: #fff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+footer a:hover {
+    color: #D9C2A7; /* Cor do link ao passar o mouse */
+}
+
 
 
 /*Typical Device Beakponts
@@ -269,6 +358,42 @@ Grandes telas: acima 1200px*/
     }
 }
 
+/* Quando a tela for menor que 992px, escondemos a navegação e mostramos o hamburguer */
+@media screen and (max-width: 992px) {
+    nav {
+        display: none; /* Esconde o menu padrão em telas menores que 992px */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Exibe o ícone do hambúrguer */
+    }
+}
+
+/* Estilo do menu quando estiver aberto */
+nav.active {
+    display: block; /* Torna o menu visível quando ele é ativado */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #D9C2A7;
+}
 /* Desktops (992px - 1200px) */
 @media screen and (min-width: 992px) {
     section#login {

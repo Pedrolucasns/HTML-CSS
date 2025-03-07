@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/*Versao Mobile*/
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+
+}
+
+body {
+    background: black url(back-phone.jpg);
+    background-size: cover;
+    background-position: center center;
+
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.575);
+    width: 90vw;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 3px black;
+}
+
+img {
+    display: block;
+    margin: auto;
+
+}
+
+img#phone { display: block; }
+img#tablet { display: none; }
+img#print { display: none; }
+img#pc { display: none; }
+img#tv { display: none; }
+/*Outras Versoes*/
+
+/*Typical Device Beakponts
+telas pequenas:até 600px
+celulares:de 600px a 768px
+tablets: 768px a 992px
+desktop 992px a 1200px
+Grandes telas: acima 1200px*/
+
+@media print {
+    /*Impressora*/
+
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background: url(back-print.jpg);
+        
+    }
+
+    main {
+        border: 2px solid black;
+    }
+
+    main h1 {
+        /*Desnecessario*/
+        
+        text-shadow: none;
+        color: black;
+    }
+
+    main::after {
+        content: 'Essa Impressao foi feita no site do Pedrinho Delas';
+        text-decoration: underline;
+        font-size: small;
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /*Tablet*/
+    body {
+        background: url(back-tablet.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: block; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    /*PC*/
+    body {
+        background: url(back-pc.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1200px) {
+    /*TV*/
+    body {
+        background: url(back-tv.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }
+}
+

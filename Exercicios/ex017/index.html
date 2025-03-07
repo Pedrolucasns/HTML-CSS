@@ -115,7 +115,78 @@
 
     </form>
 
+    <h2>Elementos Color, Range e File</h2>
 
+    <form action="">
+        <fieldset>
+            <label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor">
+        </fieldset>
+
+        <p>
+            <label for="inivel">Nivel de Satisfação</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5">
+        </p>
+
+        <p>
+            <label for="ifoto">Foto de Perfil</label>
+            <input type="file" name="foto" id="Ifoto">
+            <!--quando usar para enviar documento tem que ser em mod Post e nao em Get-->
+        </p>
+    </form>
+
+    <h2>Select, Datalist e Textarea</h2>
+
+<!--Coisas fora da tecla Input-->
+
+        <form action="">
+            <fieldset>
+                <label for="iest">Estado</label>
+                <select name="estado" id="iest">
+                    <option value="" selected>---Escolha---</option>
+                    <optgroup label="Região Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceara</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Paraiba</option>
+                        <option value="PE">Pernanbuco</option>
+                        <option value="PI">Piaui</option>
+                        <option value="RN">Rio Grande Do Norte</option>
+                        <option value="SE">Sergipe</option>
+                    </optgroup>
+                    <optgroup label="Região Sudeste">
+                        <option value="ES">Espirito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio De Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                </select>
+
+                <p>
+                    <label for="iprof">Profissão</label>
+                    <input type="text" name="prof" id="iprof" list="listprof">
+                    <datalist id="listprof">
+                        <option value="ADM">Administrador</option>
+                        <option value="ADV">Advogado</option>
+                        <option value="MED">Medico</option>
+                        <option value="DEV">Desenvolvedor</option>
+                    </datalist>
+
+                </p>
+            <!--voce consegue colocar e dar estilo dentro ja do seu html para determinados fatores do formulario-->
+                <p>
+                    <label for="imsg">Mensagem</label><br>
+                    <textarea name="msg" id="imsg" cols="30" rows="10" style="width: 600px;"></textarea>
+                </p>
+
+                <p> 
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Apagar">
+                </p>
+
+            </fieldset>
+        </form>
 
     
 </body>

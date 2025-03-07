@@ -56,6 +56,161 @@ section#login > div#formulario {
     padding: 10px;
 }
 
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario > p {
+    font-size: .8em;
+    text-align: justify;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 5px 15px; /* Aumentei o padding para dar mais destaque ao botão */
+    margin-top: 10px; /* Menor margem superior */
+    text-align: center;
+    color: #fff; /* Cor do texto */
+    background-color: #4CAF50; /* Cor de fundo mais esverdeada */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold;
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%; /* Faz o botão ocupar toda a largura do formulário */
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: #45a049; /* Cor mais escura quando o botão é hover */
+    transform: scale(1.05); /* Leve aumento do botão ao passar o mouse */
+}
+
+input[type="submit"]:active {
+    background-color: #388e3c; /* Cor quando o botão é pressionado */
+}
+
+
+
+input[type="email"], input[type="password"], input[type="submit"] {
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    background-color: #f4f1e8;
+    border-color: #594A3C;
+}
+
+input[type="email"], input[type="password"], input[type="submit"] {
+    color: #594A3C;
+}
+
+/* Adicionando um gradiente de fundo nos campos */
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    font-size: 1em;
+    color: #594A3C; /* Cor do texto */
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra interna leve */
+}
+
+/* Gradiente ao focar nos campos */
+input[type="email"]:focus, input[type="password"]:focus {
+    background: linear-gradient(to top, #D9C2A7, #594A3C);
+    color: #fff; /* Mudar a cor do texto para branco quando o campo estiver em foco */
+    border: 1px solid #594A3C; /* Mudar a borda para o tom escuro */
+}
+
+/* Estilizando os ícones para ficarem destacados */
+span.material-symbols-outlined {
+    font-size: 24px; /* Aumenta o tamanho do ícone */
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #594A3C; /* Cor dos ícones */
+    transition: color 0.3s ease;
+}
+
+/* Estilizando os ícones ao focar nos campos */
+input[type="email"]:focus ~ .material-symbols-outlined,
+input[type="password"]:focus ~ .material-symbols-outlined {
+    color: #fff; /* Muda a cor do ícone quando o campo está em foco */
+}
+
+/* Estilo das labels dentro dos campos */
+label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    font-size: 0.9em;
+    color: #594A3C; /* Cor das labels */
+    background-color: #fff;
+    padding: 0 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Estilo das labels quando o campo é focado */
+input[type="email"]:focus ~ label, input[type="password"]:focus ~ label {
+    font-size: 0.8em;
+    color: #fff; /* Mudar a cor para branco quando o campo estiver em foco */
+    background-color: #594A3C; /* Cor de fundo escura para a label */
+}
+
+/* Estilo do campo de texto quando ele tem um valor */
+input[type="email"]:not(:placeholder-shown) ~ label,
+input[type="password"]:not(:placeholder-shown) ~ label {
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #594A3C;
+}
+
+/* Ajustes no formulário */
+.campo {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.campo input {
+    padding-left: 35px; /* Adiciona espaço à esquerda para o ícone */
+}
+
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    color: #594A3C; /* Cor do texto anterior */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid #594A3C; /* Borda da cor anterior */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%; /* Faz o link ocupar toda a largura do formulário */
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+a:hover, a:focus {
+    background-color: #594A3C; /* Cor de fundo quando passar o mouse */
+    color: #fff; /* Cor do texto quando passar o mouse */
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+a:active {
+    background-color: #3d2d21; /* Cor mais escura quando pressionado */
+    color: #fff; /* Cor do texto quando pressionado */
+}
+
+
+
 /*Typical Device Beakponts
 telas pequenas:até 600px
 celulares:de 600px a 768px
@@ -64,7 +219,34 @@ desktop 992px a 1200px
 Grandes telas: acima 1200px*/
 
  /* Responsividade */
+@media screen and (max-width: 767px) { /* Para telas pequenas, até 767px */
+    /* Ajustando o tamanho e o espaçamento dos botões */
+    input[type="submit"] {
+        width: auto; /* Deixa o botão com o tamanho adequado */
+        padding: 9px 10px; /* Ajusta o padding para ser menor */
+        margin-top: 5px; /* Reduz a margem superior */
+        display: inline-block; /* Alinha os botões de forma compacta */
+    }
 
+    a {
+        width: auto; /* Deixa o link com tamanho adequado */
+        padding: 5px 20px; /* Ajusta o padding para ser menor */
+        margin-top: 5px; /* Reduz a margem superior */
+        display: inline-block; /* Alinha os links de forma compacta */
+    }
+
+    /* Colocando os botões perto do campo de senha */
+    .campo {
+        margin-bottom: 5px; /* Ajusta o espaço entre os campos */
+    }
+}
+
+/* A partir de 768px (tamanho de tablets) em diante, nada muda */
+@media screen and (min-width: 768px) {
+    /* Nenhuma alteração necessária para telas maiores que tablet */
+}
+
+ 
 /* Tablets (768px - 992px) */
 @media screen and (min-width: 768px) {
 
@@ -78,11 +260,11 @@ Grandes telas: acima 1200px*/
         flex-direction: row;
     }
     section#login > div#imagem {
-        width: 50%;
+        width: 30%;
         height: auto;
     }
     section#login > div#formulario {
-        width: 50%;
+        width: 70%;
         padding: 20px;
     }
 }
@@ -94,10 +276,21 @@ Grandes telas: acima 1200px*/
         height: 450px;
     }
     section#login > div#imagem {
-        width: 50%;
+        width: 30%;
     }
     section#login > div#formulario {
-        width: 50%;
+        width: 70%;
+    }
+
+    div#formulario > h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 2em;
+    }
+    
+    div#formulario > p {
+        font-size: 1em;
+        text-align: justify;
     }
 }
 
@@ -108,9 +301,20 @@ Grandes telas: acima 1200px*/
         height: 500px;
     }
     section#login > div#imagem {
-        width: 50%;
+        width: 30%;
     }
     section#login > div#formulario {
-        width: 50%;
+        width: 70%;
+    }
+
+    div#formulario > h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 2.5em;
+    }
+    
+    div#formulario > p {
+        font-size: 1.2em;
+        text-align: justify;
     }
 }

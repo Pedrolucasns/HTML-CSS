@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+div.container {
+    background-color: salmon;
+
+    display: flex;
+}
+
+div.item {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    flex: auto;
+}
+
+div.container2 {
+    background-color: salmon;
+
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+div.item2 {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    width: 450px;
+    height: 300px;
+}

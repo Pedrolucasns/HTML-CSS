@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/*Configuraçao Pimeiro Exemplo*/
+
 div.container {
     background-color: salmon;
 
@@ -13,6 +15,8 @@ div.item {
     flex: auto;
 }
 
+/*Configuraçao Segundo Exemplo*/
+
 div.container2 {
     background-color: salmon;
 
@@ -25,6 +29,70 @@ div.item2 {
     border: 1px solid black;
     text-align: center;
     padding: 10px;
+}
+
+/*Configuraçao Terceiro Exemplo*/
+
+div.container3 {
+    background-color: salmon;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+}
+
+div.item3 {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/*Configuraçao Quarto Exemplo*/
+
+div.container4 {
+    background-color: salmon;
+
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+div.item4 {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/*Configuraçao Quinto Exemplo*/
+
+div.container5 {
+    background-color: salmon;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+div.item5 {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    flex: auto;
+}
+
+/*Configuraçao Sexto Exemplo*/
+
+div.container6 {
+    background-color: salmon;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div.item6 {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    flex: auto;
 }
 
 img {

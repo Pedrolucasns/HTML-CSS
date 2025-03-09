@@ -266,3 +266,19 @@ div#d {
 div#e {
     align-self:auto ;
 }
+/*Exemplo de Flexis-basis*/
+div.container12 {
+    background-color: salmon;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+div.item12 {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    flex-basis: 100px;
+
+}

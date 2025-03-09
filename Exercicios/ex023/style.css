@@ -173,6 +173,24 @@ section {
     width: 250px;
 }
 
+/*Exemplo Elementos Enpacotados*/
+
+div.container9 {
+    background-color: aqua;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    height: 500px;
+}
+
+div.item9 {
+    background-color: brown;
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+
+}
 img {
     width: 450px;
     height: 300px;

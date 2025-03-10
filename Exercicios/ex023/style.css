@@ -266,7 +266,9 @@ div#d {
 div#e {
     align-self:auto ;
 }
+
 /*Exemplo de Flexis-basis*/
+
 div.container12 {
     background-color: salmon;
 
@@ -281,4 +283,40 @@ div.item12 {
     text-align: center;
     flex-basis: 100px;
 
+}
+
+/*Controle de tamanho de Itens Flexiveis*/
+
+div.container13 {
+    background-color: salmon;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+div.item13 {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    flex-basis: 100px;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+}
+
+div#gr1 {
+    flex-grow: 0;
+}
+
+div#gr2 {
+    flex-grow: 2;
+}
+
+div#sh1 {
+    flex-shrink: 0;
+}
+
+div#sh2 {
+    flex-shrink: 2;
 }

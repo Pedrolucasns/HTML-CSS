@@ -27,6 +27,7 @@ header {
 header > h1 {
     border: 1px solid black;
     flex: 0 0 200px;
+    text-shadow: 2px 2px 0px black;
 }
 
 nav {
@@ -58,4 +59,26 @@ main {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 3px black;
+}
+
+/*Typical Device Beakponts
+telas pequenas:até 600px
+celulares:de 600px a 768px
+tablets: 768px a 992px
+desktop 992px a 1200px
+Grandes telas: acima 1200px*/
+
+/* Typical Device Breakpoints */
+@media screen and (max-width: 768px) {
+    header, header > nav {
+        flex-flow: column nowrap;
+    }
+    
+    header > h1 {
+        flex-basis: 50px;
+    }
+
+    header > nav > a {
+        width: 90vw;
+    }
 }

@@ -320,3 +320,20 @@ div#sh1 {
 div#sh2 {
     flex-shrink: 2;
 }
+
+/*Exemplo de Propriedade Flex*/
+
+div.container14 {
+    background-color: salmon;
+
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+div.item14 {
+    background-color: aqua;
+    border: 1px solid black;
+    text-align: center;
+    flex: 1 0 100px;
+}
